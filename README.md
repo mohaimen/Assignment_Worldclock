@@ -11,7 +11,7 @@ Running the program
     a) first run make file
     b) if you still need permission to run some file, then use chmod 755 "file name"
 
-1.Textual Interface for worldclock (tui.worldnetwork)
+1.Textual Interface for worldclock (tui.worldclock)
 
     Input Continet and City Name separated by "/" (e.g Europe/Rome) (in input box)
     Time and date are displayed
