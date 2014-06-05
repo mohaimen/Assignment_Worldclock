@@ -8,23 +8,19 @@ Instruction to run the Timezone Program
     git clone https://github.com/mohaimen/Assignment_Worldclock.git
    
 Running the program
+    a) first run make file
+    b) if you still need permission to run some file, then use chmod 755 "file name"
 
-1.Basic command line (for practice)
+1.Textual Interface for worldclock
 
-    Type: main (it works as a services)
-    Give input
-    There is also test file named current_date_timme using tzselect
+  Input Continet and City Name separated by "/" (e.g Europe/Rome) (in input box)
+  Time and date are displayed
+  Press any key to continue
 
-2.Textual Interface for timezone
-
-    Type tui_timezone (sometimes you need permission to run this file, then use chmod)
-    Type Continet and City Name separated by / (e.g Europe/Helsenki) (in input box)
-    Finally time and date are displayed
-
-3.GUI with Localization(Language: Bangla)
-
-    Run nc localhost 1234, then gui_timezone_network (you can directly run gui_timezone_network, if need permission, use chmod)
-    Type 1 for Bangla Language, Type 2 for English
-    Type Continent
-    Type City Name
+2.GUI with Localization
+    
+    Input B for Bengali Language, Type E for choosing English language
+    Then choose Continent Name from the list
+    Then choose City Name from the list
     Finally, The time and date is displayed in the chosen language
+    If you press ok during continue the whole process will be started again.
