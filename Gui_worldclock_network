@@ -51,30 +51,160 @@ fi
 while true
 do
 
-language=$(zenity --entry --entry-text="Type" --text="Please Choose language: Type B for Bengali ; Type E for English")
+language=$(zenity --entry --entry-text="Type" --text="Please Choose language: Type B for Bengali ; Type E for English") || end
 
 if [ "$language" == "B" ]
 then
 
 {
-export LANG=bn_BD.UTF-8
+
 LANG=bn_BD
-zenity --entry --entry-text="" --text="মহাদেশ/শহর" > $FILE1 || end
+export LANG=bn_BD.UTF-8
+continent=$(zenity --list \
+ --title="মহাদেশের নাম" \
+ --column="মহদেশ" \
+Africa \
+Americas \
+Antarctica \
+Asia \
+Australia \
+Europe) || end 
+city=$(zenity --list \
+ --title="শহরের নাম" \
+ --column="শহর" \
+Accra \
+Adamstown \
+Addis_Ababa \
+Algiers \
+Amsterdam \
+Ankara \
+Apia \
+Athens \
+Baghdad \
+Bangkok \
+Beirut \
+Belgrade \
+Berlin \
+Bissau \
+Brasília \
+Brussels \
+Bucharest \
+Budapest \
+Cairo \
+Canberra \
+Caracas \
+Copenhagen \
+Dakar \
+Dhaka \
+Djibouti \
+Doha \
+Dublin \
+Helsinki \
+Islamabad \
+Jakarta \
+Kampala \
+Kiev \
+Lima \
+Lisbon \
+Luxembourg \
+Madrid \
+Moscow \
+Nairobi \
+Prague \
+Riga \
+Riyadh \
+Rome \
+Seoul \
+Singapore \
+Sofia \
+Stockholm \
+Taipei \
+Tallinn \
+Tehran \
+Tokyo \
+Vatican \
+Vienna) || end
+export TZ="$continent"/"$city"
+date=$(date)
+zenity --info --title="Clock" --text="Date and Time: $date" || end
+zenity --question --title "" --text "Continue?" || end
 }
+
 elif [ "$language" == "E" ]
 then
 {
 export LANG=en_US.UTF-8
 LANG=en_US
-zenity --entry --entry-text="type" --text=" Insert Continent/City E.g: Europe/Rome" > $FILE1 || end
+
+continent=$(zenity --list \
+ --title="Choose your Continent" \
+ --column="Continent Name" \
+Africa \
+Americas \
+Antarctica \
+Asia \
+Australia \
+Europe) || end
+city=$(zenity --list \
+ --title="Choose your City" \
+ --column="City Name" \
+Accra \
+Adamstown \
+Addis_Ababa \
+Algiers \
+Amsterdam \
+Ankara \
+Apia \
+Athens \
+Baghdad \
+Bangkok \
+Beirut \
+Belgrade \
+Berlin \
+Bissau \
+Brasília \
+Brussels \
+Bucharest \
+Budapest \
+Cairo \
+Canberra \
+Caracas \
+Copenhagen \
+Dakar \
+Dhaka \
+Djibouti \
+Doha \
+Dublin \
+Helsinki \
+Islamabad \
+Jakarta \
+Kampala \
+Kiev \
+Lima \
+Lisbon \
+Luxembourg \
+Madrid \
+Moscow \
+Nairobi \
+Prague \
+Riga \
+Riyadh \
+Rome \
+Seoul \
+Singapore \
+Sofia \
+Stockholm \
+Taipei \
+Tallinn \
+Tehran \
+Tokyo \
+Vatican \
+Vienna)  || end
+export TZ="$continent"/"$city"
+date=$(date)
+zenity --info --title="Clock" --text="Date and Time: $date" 
+zenity --question --title "" --text "Continue?" || end
 }
 fi
-FILE2=$(export TZ=`cat $FILE1`;date)
-
-zenity --info --title "Current Time and Date" --text " Time: $FILE2"
-zenity --question --title "" --text "Continue?" || end
-
-
-
 
 done
