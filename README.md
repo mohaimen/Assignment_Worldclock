@@ -13,9 +13,9 @@ Running the program
 
 1.Textual Interface for worldclock
 
-  Input Continet and City Name separated by "/" (e.g Europe/Rome) (in input box)
-  Time and date are displayed
-  Press any key to continue
+    Input Continet and City Name separated by "/" (e.g Europe/Rome) (in input box)
+    Time and date are displayed
+    Press any key to continue
 
 2.GUI with Localization
     
