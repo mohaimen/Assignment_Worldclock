@@ -11,13 +11,13 @@ Running the program
     a) first run make file
     b) if you still need permission to run some file, then use chmod 755 "file name"
 
-1.Textual Interface for worldclock
+1.Textual Interface for worldclock (tui.worldnetwork)
 
     Input Continet and City Name separated by "/" (e.g Europe/Rome) (in input box)
     Time and date are displayed
     Press any key to continue
 
-2.GUI with Localization for worldclock
+2.GUI with Localization for worldclock  (Gui_worldclock_network)
     
     Input B for Bengali Language, Type E for choosing English language
     Then choose Continent Name from the list
