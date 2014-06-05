@@ -69,15 +69,12 @@ LANG=en_US
 zenity --entry --entry-text="type" --text="Insert Continent/City" > $FILE1 || end
 }
 fi
+FILE2=$(export TZ=`cat $FILE1`;date)
 
-if cat $FILE1 | $MAIN > $FILE2 2>$ERROR
-then
-zenity --info --title "Current Time and Date" --text " Time: `cat $FILE2`"
+zenity --info --title "Current Time and Date" --text " Time: $FILE2"
 zenity --question --title "" --text "Continue?" || end
 
-else
-zenity --info --title "Alert" --text "Error: Service not running ??"
-exit -1
-fi
+
+
 
 done
