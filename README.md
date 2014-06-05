@@ -3,7 +3,7 @@ Assignment_Worldclock
 
 This is a program to take Continent name and City name as user input and show the time accordingly.
 
-Instruction to run the Timezone Program
+Instruction to run the Worldclock Program
 
     git clone https://github.com/mohaimen/Assignment_Worldclock.git
    
