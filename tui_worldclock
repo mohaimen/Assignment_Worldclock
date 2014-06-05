@@ -1,0 +1,18 @@
+#!/bin/sh
+
+DIALOG=${DIALOG=dialog}
+
+
+
+$DIALOG --title " World Clock" --clear \
+       \
+        --inputbox "put continent/city name: \n e.g:Europe/Helsinki " 50 59 2>/tmp/input 
+
+address=`cat /tmp/input`
+export TZ=`cat /tmp/input`
+new=$(date)
+
+MSG="Date and Time of $address is:\n  $new \n\nPress any key to continue...."
+		$DIALOG --msgbox "$MSG" 30 50 
+
+
