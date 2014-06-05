@@ -1,6 +1,6 @@
 install:
 
-				install main gui_clock_network /usr/local/bin
+				install main Gui_worldclock_network /usr/local/bin
 				which gdialog >/dev/null 2>&1 || yum -y install gdialog /usr/local/bin
 				which xinetd >/dev/null 2>&1 || yum -y install xinetd
 				which nc >/dev/null 2>&1 || yum -y install nc
