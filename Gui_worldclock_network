@@ -59,14 +59,14 @@ then
 {
 export LANG=bn_BD.UTF-8
 LANG=bn_BD
-zenity --entry --entry-text="" --text="Insert Continent/City" > $FILE1 || end
+zenity --entry --entry-text="" --text="মহাদেশ/শহর" > $FILE1 || end
 }
 elif [ "$language" == "E" ]
 then
 {
 export LANG=en_US.UTF-8
 LANG=en_US
-zenity --entry --entry-text="type" --text="Insert Continent/City" > $FILE1 || end
+zenity --entry --entry-text="type" --text=" Insert Continent/City E.g: Europe/Rome" > $FILE1 || end
 }
 fi
 FILE2=$(export TZ=`cat $FILE1`;date)
