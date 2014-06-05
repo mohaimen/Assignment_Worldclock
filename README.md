@@ -17,7 +17,7 @@ Running the program
     Time and date are displayed
     Press any key to continue
 
-2.GUI with Localization
+2.GUI with Localization for worldclock
     
     Input B for Bengali Language, Type E for choosing English language
     Then choose Continent Name from the list
