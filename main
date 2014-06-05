@@ -1,11 +1,7 @@
 #!/bin/sh
 FILE=/tmp/t1-$$
 read cont
-echo $cont
-#$FILE= export TZ="$cont"
-FILE=$(export TZ=$cont;date)
-sh $FILE
-EXIT_STATUS=$?
-rm -f $FILE
-exit $EXIT_STATUS
+
+export TZ=$cont
+date
 
