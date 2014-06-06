@@ -51,7 +51,7 @@ fi
 while true
 do
 
-language=$(zenity --entry --entry-text="Type" --text="Please Choose language: Type B for Bengali ; Type E for English") || end
+language=$(zenity --entry --entry-text="Type" --text="Choose language: Type B for Bengali ; Type E for English. ভাষা নির্বাচন করুন: বাংলার জন্য B; ইংরেজির জন্য E-") || end
 
 if [ "$language" == "B" ]
 then
